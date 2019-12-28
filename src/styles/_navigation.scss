@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  ul {
+    list-style-type: none;
+    display: inline-block;
+    li {
+      display: inline-block;
+    }
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+  }
+  #nav-list {
+    li:first-child::before {
+      content: 'let options = ["';
+      font-size: 14px;
+    }
+    li::after {
+      content: '", "';
+      font-size: 14px;
+    }
+    li:last-child::after {
+      content: '"]';
+      font-size: 14px;
+    }
+  }
+}
